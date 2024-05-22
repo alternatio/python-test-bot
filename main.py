@@ -23,6 +23,8 @@ def change_date_format(iso_date):
 
 # получение погоды
 async def getWeather(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+  await update.message.reply_text(f'Сейчас узнаем... Подождите')
+
   # запрос
   url = "https://api.open-meteo.com/v1/forecast"
   params = {
